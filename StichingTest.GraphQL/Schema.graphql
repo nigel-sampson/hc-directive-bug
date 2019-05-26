@@ -1,0 +1,15 @@
+schema {
+    query: Query
+}
+
+directive @test on OBJECT
+
+type Query {
+    people: [Person!]
+}
+
+type Person @test {
+    id: ID!
+    firstName: String!
+    lastName: String!
+}
