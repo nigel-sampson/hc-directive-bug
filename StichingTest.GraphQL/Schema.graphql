@@ -2,13 +2,11 @@ schema {
     query: Query
 }
 
-directive @test on OBJECT
-
 type Query {
-    people: [Person!]
+    people: [Person]!
 }
 
-type Person @test {
+type Person {
     id: ID!
     firstName: String!
     lastName: String!

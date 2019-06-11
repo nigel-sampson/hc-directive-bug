@@ -18,7 +18,8 @@ namespace StichingTest.GraphQL
             });
 
             services.AddStitchedSchema(b => b
-                .AddSchemaFromFile("remote", "./Parsing.graphql"));
+                .AddSchemaFromFile("remote", "./schema.graphql")
+                .RenameType("remote", "Person", "User"));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
